@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purushotham S | Full-Stack Python Developer & AI Engineer</title>
+  <meta name="description" content="Professional portfolio of Purushotham S — Full-Stack Python Developer, AI Engineer, and Cloud Practitioner based in Bengaluru. Specializing in FastAPI, Next.js, ML, and AI-powered applications." />
+  <meta name="keywords" content="Purushotham S, Python Developer, AI Engineer, FastAPI, Full Stack, Bengaluru, Portfolio, Machine Learning" />
+  <meta name="theme-color" content="#030712" />
+  <meta property="og:title" content="Purushotham S | Full-Stack Python Developer" />
+  <meta property="og:description" content="Building intelligent, production-ready applications with Python, AI, and Cloud." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="profile.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" href="profile.png" as="image" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ========== LOADER ========== -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">&lt;PS/&gt;</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">&lt;PS/&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta" id="navCta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Purushotham S</span>
+        </h1>
+        <div class="hero-typewriter">
+          <span class="typewriter-prefix">I build </span>
+          <span class="typewriter-text" id="typewriterText"></span>
+          <span class="typewriter-cursor">|</span>
+        </div>
+        <p class="hero-description">
+          Full-Stack Python Developer & AI Engineer crafting intelligent, production-ready applications. 
+          Passionate about building systems that solve real problems with clean code and cutting-edge AI.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary" id="heroViewWork">
+            <span>View My Work</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn-outline" id="heroContact">Get In Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">AI</span>
+            <span class="stat-label">Specialist</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="profile-wrapper">
+          <div class="profile-ring ring-1"></div>
+          <div class="profile-ring ring-2"></div>
+          <div class="profile-ring ring-3"></div>
+          <div class="profile-image-container">
+            <img src="profile.png" alt="Portrait of Purushotham S" class="profile-img" id="profileImg" width="640" height="640" fetchpriority="high" decoding="async" />
+          </div>
+          <div class="floating-badge badge-python">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05L0 11.97l.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.26-.02.21-.01h5.33v-.69H8.75L8.22.5l.51-.32.56-.26.59-.19.6-.14.59-.1.57-.06.54-.03.5-.01h.15zm-4.1 4.35c-.49 0-.9.41-.9.9s.41.9.9.9.9-.41.9-.9-.41-.9-.9-.9z"/><path d="M8.5 24h-.15l-.5-.01-.54-.03-.57-.06-.59-.1-.6-.14-.59-.19-.56-.26-.51-.32.53-4.35H8.75v-.69H3.42l-.21-.01-.26-.02-.32-.05-.36-.1-.4-.16-.42-.24-.42-.33-.4-.44-.36-.57-.32-.71-.24-.87-.16-1.04-.06-1.22.14-1.41.21-.88.28-.73.32-.59.35-.46.36-.36.36-.26.35-.18.32-.12.28-.07.21-.03h3.26v3.06l.02.21.04.27.07.32.1.35.15.37.2.36.27.35.33.32.41.27.5.22.59.14.69.05h6.66l.33.1.35.14.35.19.33.25.3.31.26.38.21.46.13.55.05.63v4.04l-.02.2-.04.26-.1.3-.16.33-.25.34-.34.34-.45.32-.59.3-.73.26-.9.2-1.07.1-.97.03h-.15zm4.1-4.35c.49 0 .9-.41.9-.9s-.41-.9-.9-.9-.9.41-.9.9.41.9.9.9z"/></svg>
+            Python
+          </div>
+          <div class="floating-badge badge-ai">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 16.5 13z"/></svg>
+            AI/ML
+          </div>
+          <div class="floating-badge badge-cloud">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 20Q4.22 20 2.61 18.43 1 16.85 1 14.58q0-1.95 1.17-3.48 1.18-1.53 3.08-1.95.51-1.91 2.07-3.03 1.56-1.12 3.41-1.12 2.27 0 3.86 1.57 1.58 1.57 1.58 3.93l.1.96q1.67.15 2.74 1.3 1.08 1.14 1.08 2.74 0 1.73-1.18 2.9Q17.73 20 15.98 20z"/></svg>
+            AWS
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Turning ideas into <span class="gradient-text">intelligent reality</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">
+            I'm a Full-Stack Python Developer and AI Engineer based in <strong>Bengaluru, India</strong> — passionate about building production-grade applications that fuse modern web technologies with artificial intelligence.
+          </p>
+          <p class="about-body">
+            From developing conversational AI systems and semantic search engines to building real-time crypto dashboards and company research assistants, I thrive at the intersection of backend engineering and intelligent systems.
+          </p>
+          <p class="about-body">
+            I hold certifications in Python, SQL, AWS Cloud, AI Fundamentals, and more — continuously leveling up my craft with hands-on hackathon projects and real-world deployments.
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-icon">📍</span>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Bengaluru, India</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📧</span>
+              <div>
+                <span class="info-label">Email</span>
+                <a href="mailto:purushothamchowdhary146@gmail.com" class="info-value info-link">purushothamchowdhary146@gmail.com</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">📱</span>
+              <div>
+                <span class="info-label">Phone</span>
+                <a href="tel:+917981713838" class="info-value info-link">+91 79817 13838</a>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">💼</span>
+              <div>
+                <span class="info-label">Status</span>
+                <span class="info-value status-open">Open to Work</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-socials">
+            <a href="https://www.linkedin.com/in/purushotham-s-a3082b2b1/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" id="aboutLinkedin">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/purushotham-24" target="_blank" rel="noopener noreferrer" class="social-btn github" id="aboutGithub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="code-card">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="code-filename">purushotham.py</span>
+            </div>
+            <pre class="code-content"><code><span class="kw">class</span> <span class="cls">Developer</span>:
+    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="param">self</span>):
+        <span class="param">self</span>.name = <span class="str">"Purushotham S"</span>
+        <span class="param">self</span>.role = <span class="str">"Full-Stack Python Dev"</span>
+        <span class="param">self</span>.location = <span class="str">"Bengaluru 🇮🇳"</span>
+        <span class="param">self</span>.skills = [
+            <span class="str">"Python"</span>, <span class="str">"FastAPI"</span>,
+            <span class="str">"Next.js"</span>, <span class="str">"AI/ML"</span>,
+            <span class="str">"AWS"</span>, <span class="str">"SQL"</span>
+        ]
+
+    <span class="kw">def</span> <span class="fn">build</span>(<span class="param">self</span>, idea):
+        <span class="kw">return</span> <span class="param">self</span>.turn_into_reality(idea)
+
+    <span class="kw">def</span> <span class="fn">passion</span>(<span class="param">self</span>):
+        <span class="kw">return</span> <span class="str">"AI × Clean Code × Impact"</span>
+
+p = <span class="cls">Developer</span>()
+p.build(<span class="str">"your next big idea"</span>)</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category" data-category="backend">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">⚙️</div>
+            <h3>Backend & APIs</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Postman</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-category="frontend">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🎨</div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Next.js 15</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">HTML/CSS/JS</span>
+            <span class="skill-tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-category="ai">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🤖</div>
+            <h3>AI & Machine Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">LLM APIs</span>
+            <span class="skill-tag">Sentence Transformers</span>
+            <span class="skill-tag">FAISS</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Random Forest</span>
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">Semantic Search</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-category="cloud">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">☁️</div>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Render</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-category="tools">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">🛠️</div>
+            <h3>Tools & Integrations</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenRouter API</span>
+            <span class="skill-tag">Serper.dev</span>
+            <span class="skill-tag">Firecrawl</span>
+            <span class="skill-tag">jsPDF</span>
+            <span class="skill-tag">Discord Bot API</span>
+            <span class="skill-tag">Axios</span>
+            <span class="skill-tag">Cheerio</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-category="mobile">
+          <div class="skill-category-header">
+            <div class="skill-cat-icon">📱</div>
+            <h3>Mobile & Other</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Android (Java)</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">AI Tools</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Production-Ready <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Real-world applications built with modern tech stacks and deployed live</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: AI Company Research -->
+        <div class="project-card featured" id="project-ai-research">
+          <div class="project-header">
+            <div class="project-icon">🔍</div>
+            <div class="project-badges">
+              <span class="project-badge hackathon">🏆 Hackathon</span>
+              <span class="project-badge live">🟢 Live</span>
+            </div>
+          </div>
+          <div class="project-period">Jul 2026 · Full-Time</div>
+          <h3 class="project-title">AI Company Research Assistant</h3>
+          <p class="project-description">
+            An AI-powered Company Research Assistant that analyzes companies from a name or URL and generates structured business insights. Built for the <strong>Relu Consultancy AI & Automation Developer Hackathon</strong>.
+          </p>
+          <ul class="project-highlights">
+            <li>ChatGPT-style conversational UI with real-time streaming</li>
+            <li>PDF report generation & Discord Bot integration</li>
+            <li>Multi-source: LLM + web search + website crawling pipeline</li>
+            <li>Deployed on Vercel with production-ready architecture</li>
+          </ul>
+          <div class="project-tech">
+            <span>Next.js 15</span>
+            <span>TypeScript</span>
+            <span>OpenRouter API</span>
+            <span>Serper.dev</span>
+            <span>Firecrawl</span>
+            <span>jsPDF</span>
+            <span>Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://company-research-assistant-nfqc-rust.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link primary" id="proj1-demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+            <a href="https://github.com/purushotham-24/company-research-assistant" target="_blank" rel="noopener noreferrer" class="project-link secondary" id="proj1-github">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              Source Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: SHL AI Assessment -->
+        <div class="project-card" id="project-shl">
+          <div class="project-header">
+            <div class="project-icon">🎯</div>
+            <div class="project-badges">
+              <span class="project-badge live">🟢 Live</span>
+            </div>
+          </div>
+          <div class="project-period">May 2026 · Full-Time</div>
+          <h3 class="project-title">SHL AI Assessment Recommendation System</h3>
+          <p class="project-description">
+            A conversational AI that suggests relevant SHL assessments based on hiring requirements using semantic retrieval. Features multi-turn conversation with dynamic clarification handling.
+          </p>
+          <ul class="project-highlights">
+            <li>Semantic similarity search with FAISS vector database</li>
+            <li>Recruiter-style conversational workflow engine</li>
+            <li>FastAPI backend + Streamlit frontend</li>
+            <li>Deployed on Render & Streamlit Cloud</li>
+          </ul>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>Streamlit</span>
+            <span>Sentence Transformers</span>
+            <span>FAISS</span>
+            <span>Scikit-learn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/purushotham-24" target="_blank" rel="noopener noreferrer" class="project-link secondary" id="proj2-github">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: CoinGecko Dashboard -->
+        <div class="project-card" id="project-crypto">
+          <div class="project-header">
+            <div class="project-icon">📈</div>
+            <div class="project-badges"></div>
+          </div>
+          <div class="project-period">Jul – Aug 2025 · Full-Time</div>
+          <h3 class="project-title">CoinGecko Cryptocurrency Dashboard</h3>
+          <p class="project-description">
+            A responsive crypto dashboard displaying real-time data for 50+ cryptocurrencies with interactive price trend charts and detailed coin pages.
+          </p>
+          <ul class="project-highlights">
+            <li>Live data via CoinGecko API (price, volume, market cap)</li>
+            <li>Pagination & search bar for 50 coins per page</li>
+            <li>Interactive charts for price trend visualization</li>
+            <li>Performance-optimized React UI</li>
+          </ul>
+          <div class="project-tech">
+            <span>React</span>
+            <span>JavaScript</span>
+            <span>HTML/CSS</span>
+            <span>CoinGecko API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/purushotham-24" target="_blank" rel="noopener noreferrer" class="project-link secondary" id="proj3-github">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Employee Wellbeing -->
+        <div class="project-card" id="project-ml">
+          <div class="project-header">
+            <div class="project-icon">🧠</div>
+            <div class="project-badges"></div>
+          </div>
+          <div class="project-period">Jun – Jul 2025 · Full-Time</div>
+          <h3 class="project-title">Employee Well-Being Prediction</h3>
+          <p class="project-description">
+            ML model predicting employee well-being from HR and workplace data. Achieved 84% accuracy using Random Forest after feature engineering and EDA.
+          </p>
+          <ul class="project-highlights">
+            <li>84% accuracy — Random Forest classifier</li>
+            <li>78% accuracy — Decision Tree classifier</li>
+            <li>Full EDA, preprocessing & feature engineering pipeline</li>
+            <li>Comparative model evaluation using standard metrics</li>
+          </ul>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>Scikit-learn</span>
+            <span>Random Forest</span>
+            <span>Decision Tree</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/purushotham-24" target="_blank" rel="noopener noreferrer" class="project-link secondary" id="proj4-github">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5: CoffeeHub -->
+        <div class="project-card" id="project-coffee">
+          <div class="project-header">
+            <div class="project-icon">☕</div>
+            <div class="project-badges"></div>
+          </div>
+          <div class="project-period">Feb – Mar 2025 · Full-Time</div>
+          <h3 class="project-title">CoffeeHub — Android Café App</h3>
+          <p class="project-description">
+            An Android café ordering and management app with menu browsing, real-time order placement, and intuitive UI/UX for a seamless customer experience.
+          </p>
+          <ul class="project-highlights">
+            <li>Menu browsing & order placement system</li>
+            <li>Real-time order status updates</li>
+            <li>Smooth navigation & performance optimization</li>
+            <li>Intuitive Material Design UI/UX</li>
+          </ul>
+          <div class="project-tech">
+            <span>Android</span>
+            <span>Java</span>
+            <span>Material Design</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/purushotham-24" target="_blank" rel="noopener noreferrer" class="project-link secondary" id="proj5-github">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS ========== -->
+  <section class="section certs-section" id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title">Certifications & <span class="gradient-text">Credentials</span></h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card" id="cert-python">
+          <div class="cert-icon">🐍</div>
+          <div class="cert-info">
+            <h4>Python Full Stack Certification</h4>
+            <span class="cert-issuer">Full-stack development</span>
+          </div>
+          <div class="cert-badge verified">✓</div>
+        </div>
+        <div class="cert-card" id="cert-sql">
+          <div class="cert-icon">🗄️</div>
+          <div class="cert-info">
+            <h4>SQL Certification</h4>
+            <span class="cert-issuer">HackerRank</span>
+          </div>
+          <div class="cert-badge verified">✓</div>
+        </div>
+        <div class="cert-card" id="cert-ai">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-info">
+            <h4>AI Fundamentals</h4>
+            <span class="cert-issuer">Databricks</span>
+          </div>
+          <div class="cert-badge verified">✓</div>
+        </div>
+        <div class="cert-card" id="cert-aws">
+          <div class="cert-icon">☁️</div>
+          <div class="cert-info">
+            <h4>AWS Cloud Practitioner Essentials</h4>
+            <span class="cert-issuer">Amazon Web Services</span>
+          </div>
+          <div class="cert-badge verified">✓</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Build Something <span class="gradient-text">Great Together</span></h2>
+        <p class="section-subtitle">I'm actively looking for exciting opportunities. Whether you have a project in mind or just want to connect — my inbox is always open.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card" id="contact-email">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:purushothamchowdhary146@gmail.com" class="contact-value">purushothamchowdhary146@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contact-phone">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.29h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6.29 6.29l1.27-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+917981713838" class="contact-value">+91 79817 13838</a>
+            </div>
+          </div>
+          <div class="contact-card" id="contact-location">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Bengaluru, Karnataka, India</span>
+            </div>
+          </div>
+          <div class="contact-social-links">
+            <a href="https://www.linkedin.com/in/purushotham-s-a3082b2b1/" target="_blank" rel="noopener noreferrer" class="contact-social linkedin" id="contact-linkedin">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn Profile
+            </a>
+            <a href="https://github.com/purushotham-24" target="_blank" rel="noopener noreferrer" class="contact-social github" id="contact-github">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub Profile
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="nameInput">Your Name</label>
+              <input type="text" id="nameInput" name="name" placeholder="John Doe" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="emailInput">Your Email</label>
+              <input type="email" id="emailInput" name="email" placeholder="john@company.com" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subjectInput">Subject</label>
+              <input type="text" id="subjectInput" name="subject" placeholder="Job opportunity / Project collaboration" />
+            </div>
+            <div class="form-group">
+              <label for="messageInput">Message</label>
+              <textarea id="messageInput" name="message" placeholder="Tell me about your project or opportunity..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="formSubmitBtn">
+              <span>Send via Email</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+              <span>✅ Message prepared! Opening your email client...</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">&lt;PS/&gt;</div>
+        <p class="footer-text">Crafted with ❤️ by <strong>Purushotham S</strong> · Bengaluru, India</p>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/purushotham-s-a3082b2b1/" target="_blank" rel="noopener noreferrer" id="footer-linkedin">LinkedIn</a>
+          <a href="https://github.com/purushotham-24" target="_blank" rel="noopener noreferrer" id="footer-github">GitHub</a>
+          <a href="mailto:purushothamchowdhary146@gmail.com" id="footer-email">Email</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Purushotham S. All rights reserved.</p>
+        <p class="footer-tech">Built with HTML · CSS · JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
