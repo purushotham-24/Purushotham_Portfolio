@@ -414,6 +414,7 @@ html:not(.js) .loader { display: none; }
 .badge-python { top: 0; left: -40px; color: #3b82f6; animation: floatBadge 3s ease-in-out infinite; }
 .badge-ai     { bottom: 30px; left: -50px; color: #8b5cf6; animation: floatBadge 3s ease-in-out infinite .5s; }
 .badge-cloud  { top: 60px; right: -30px; color: #06b6d4; animation: floatBadge 3s ease-in-out infinite 1s; }
+.badge-sql    { bottom: 10px; right: -38px; color: var(--accent-orange); animation: floatBadge 3s ease-in-out infinite 1.5s; }
 
 @keyframes floatBadge {
   0%,100% { transform: translateY(0); }
@@ -680,7 +681,7 @@ html:not(.js) .loader { display: none; }
 .certs-section { background: var(--bg-base); }
 .certs-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1rem;
 }
 .cert-card {
